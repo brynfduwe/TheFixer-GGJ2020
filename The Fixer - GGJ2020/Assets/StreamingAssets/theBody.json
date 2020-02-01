@@ -1,0 +1,47 @@
+﻿{
+  "alibi_pt1":
+  [
+    {
+      "name": "Stretch",
+      "line": "Violets are red."
+    },
+	{
+      "name": "Skids",
+      "line": "Roses are blue."
+    },
+	{
+      "name": "Stretch",
+      "line": "Sunflowers are yellow."
+    }
+  ],
+  "alibi_pt2":
+  [
+    {
+      "name": "Skids",
+      "line": "The Sith are good."
+    },
+	{
+      "name": "Stretch",
+      "line": "The Jedi are good."
+    },
+	{
+      "name": "Skids",
+      "line": "The Jedi are evil."
+    }
+  ],
+    "alibi_pt3":
+  [
+    {
+      "name": "Stretch",
+      "line": "This is all real."
+    },
+	{
+      "name": "Skids",
+      "line": "This is a simulation."
+    },
+	{
+      "name": "Stretch",
+      "line": "This is a video game."
+    }
+  ]
+}

@@ -7,6 +7,7 @@ public class DialogManager : MonoBehaviour
     bool m_inMenu = false;
     [SerializeField] DialogTheStory m_story = null;
     [SerializeField] DialogAlibi m_alibi = null;
+    [SerializeField] DialogBody m_body = null;
     [SerializeField] Goon[] m_goons = null;
 
     PlayerMovement m_playerMove = null;
@@ -47,6 +48,12 @@ public class DialogManager : MonoBehaviour
     {
         m_alibi.Init();
     }
+
+    public void Body()
+    {
+        m_body.Init();
+    }
+
 
     public void Leave()
     {

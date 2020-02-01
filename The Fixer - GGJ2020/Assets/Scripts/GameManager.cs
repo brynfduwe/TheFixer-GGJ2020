@@ -21,6 +21,14 @@ public class GameManager : MonoBehaviour
     }
     [SerializeField] EvidenceReq[] m_evidenceNeeded;
 
+    [System.Serializable]
+    public class BodyData
+    {
+        public bool completed;
+        public List<string> knownOptions = new List<string>();
+    }
+    public BodyData m_bodyProgress;
+
     void Awake()
     {
         if (instance == null)

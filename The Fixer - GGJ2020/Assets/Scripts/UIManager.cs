@@ -15,13 +15,20 @@ public class UIManager : MonoBehaviour
     [SerializeField] Vector2 m_subMenuDefaultPos;
     [SerializeField] Vector2 m_subMenuRaisedPos;
 
+    [SerializeField] RectTransform m_bodyMenuRect = null;
+    [SerializeField] Vector2 m_bodyMenuDefaultPos;
+    [SerializeField] Vector2 m_bodyMenuRaisedPos;
+
     public enum SubMenus
     {
         GoonChoices,
-        AlibiGame
+        AlibiGame,
+        HidingTheBody
     }
+
     [SerializeField] GameObject m_goonChoiceSubmenu = null;
     [SerializeField] GameObject m_alibiSubMenu = null;
+    [SerializeField] GameObject m_bodyHideSubMenu = null;
 
     void Awake()
     {
@@ -100,11 +107,14 @@ public class UIManager : MonoBehaviour
 
         m_alibiSubMenu.SetActive(false);
         m_goonChoiceSubmenu.SetActive(false);
+        m_bodyHideSubMenu.SetActive(false);
 
         if (_submenu == SubMenus.AlibiGame)
             m_alibiSubMenu.SetActive(true);
         if (_submenu == SubMenus.GoonChoices)
             m_goonChoiceSubmenu.SetActive(true);
+        if (_submenu == SubMenus.HidingTheBody)
+            m_bodyHideSubMenu.SetActive(true);
 
     }
 
