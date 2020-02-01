@@ -53,11 +53,21 @@ public class DialogAlibi : MonoBehaviour
         //}
     }
 
-    private void Start()
+    public void Init()
     {
         m_inDialog = true;
+        m_dialogIter = 0;
+        m_alibiSectionIter = 0;
+        m_currentAlibiPart = m_alibiData.alibi_pt1;
         UIManager.instance.NewSubtitle(m_currentAlibiPart[m_dialogIter].name, m_currentAlibiPart[m_dialogIter].line);
-        UIManager.instance.RaiseSubtitles(true);
+        UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.AlibiGame);
+        foreach (var goon in m_goons)
+        {
+            if (goon.getName() == m_currentAlibiPart[m_dialogIter].name)
+                goon.highlightSprite(true);
+            else
+                goon.highlightSprite(false);
+        }
     }
 
     public void alibiChoice(bool _accept)
@@ -81,8 +91,7 @@ public class DialogAlibi : MonoBehaviour
                         m_currentAlibiPart = m_alibiData.alibi_pt3;
                         break;
                     case 3:
-                        UIManager.instance.NewSubtitle("", "");
-                        m_inDialog = false;
+                        End();
                         return;
                         break;
                 }
@@ -95,6 +104,24 @@ public class DialogAlibi : MonoBehaviour
             }
 
             UIManager.instance.NewSubtitle(m_currentAlibiPart[m_dialogIter].name, m_currentAlibiPart[m_dialogIter].line);
+            foreach (var goon in m_goons)
+            {
+                if (goon.getName() == m_currentAlibiPart[m_dialogIter].name)
+                    goon.highlightSprite(true);
+                else
+                    goon.highlightSprite(false);
+            }
         }
+    }
+
+    public void End()
+    {
+        UIManager.instance.NewSubtitle("", "");
+        UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.GoonChoices);
+        m_inDialog = false;
+        foreach (var goon in m_goons)
+        {
+            goon.highlightSprite(false);
+        } 
     }
 }

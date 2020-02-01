@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void lockMovement(bool _lock)
+    public void canMove(bool _moveable)
     {
-        m_canMove = _lock;
+        m_canMove = _moveable;
     }
 }

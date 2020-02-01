@@ -11,9 +11,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] Vector2 m_subtitlesDefaultPos;
     [SerializeField] Vector2 m_subtitlesRaisedPos;
 
-    [SerializeField] RectTransform m_alibiRect = null;
-    [SerializeField] Vector2 m_alibiDefaultPos;
-    [SerializeField] Vector2 m_alibiRaisedPos;
+    [SerializeField] RectTransform m_subMenuRect = null;
+    [SerializeField] Vector2 m_subMenuDefaultPos;
+    [SerializeField] Vector2 m_subMenuRaisedPos;
+
+    public enum SubMenus
+    {
+        GoonChoices,
+        AlibiGame
+    }
+    [SerializeField] GameObject m_goonChoiceSubmenu = null;
+    [SerializeField] GameObject m_alibiSubMenu = null;
 
     void Awake()
     {
@@ -28,28 +36,42 @@ public class UIManager : MonoBehaviour
         m_subtitles.text = (_name + "\n" + _line);
     }
 
-    public void RaiseSubtitles(bool _raised)
+    public void RaiseSubMenu(bool _raised, SubMenus _submenu)
     {
         Vector2 pos = _raised ? m_subtitlesRaisedPos : m_subtitlesDefaultPos;
+
+        float speed = 1;
+        if (!_raised)
+            speed = 0.5f;
 
         iTween.ValueTo(m_subtitlesRect.gameObject, iTween.Hash(
            "from", m_subtitlesRect.anchoredPosition,
            "to", pos,
            "easetype", iTween.EaseType.easeInOutCubic,
-           "time", 1.5f,
+           "time", speed,
            "onupdatetarget", this.gameObject,
            "onupdate", "MoveSubs"));
 
 
-        pos = _raised ? m_alibiRaisedPos : m_alibiDefaultPos;
+        pos = _raised ? m_subMenuRaisedPos : m_subMenuDefaultPos;
 
-        iTween.ValueTo(m_alibiRect.gameObject, iTween.Hash(
-           "from", m_alibiRect.anchoredPosition,
+        iTween.ValueTo(m_subMenuRect.gameObject, iTween.Hash(
+           "from", m_subMenuRect.anchoredPosition,
            "to", pos,
            "easetype", iTween.EaseType.easeInOutCubic,
-           "time", 1.5f,
+           "time", speed,
            "onupdatetarget", this.gameObject,
-           "onupdate", "MoveAlibi"));
+           "onupdate", "MoveSubmenu"));
+
+
+
+        m_alibiSubMenu.SetActive(false);
+        m_goonChoiceSubmenu.SetActive(false);
+
+        if (_submenu == SubMenus.AlibiGame)
+            m_alibiSubMenu.SetActive(true);
+        if (_submenu == SubMenus.GoonChoices)
+            m_goonChoiceSubmenu.SetActive(true);
 
     }
 
@@ -58,8 +80,8 @@ public class UIManager : MonoBehaviour
         m_subtitlesRect.anchoredPosition = position;
     }
 
-    void MoveAlibi(Vector2 position)
+    void MoveSubmenu(Vector2 position)
     {
-        m_alibiRect.anchoredPosition = position;
+        m_subMenuRect.anchoredPosition = position;
     }
 }

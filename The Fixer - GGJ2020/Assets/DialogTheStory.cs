@@ -9,7 +9,6 @@ public class DialogTheStory : MonoBehaviour
     int m_dialogIter = -1;
     [SerializeField] string m_theStoryFilePath = null;
     [SerializeField] Goon[] m_goons = null;
-    PlayerMovement m_playerMove = null;
 
     [System.Serializable]
     public class DialogData
@@ -48,22 +47,13 @@ public class DialogTheStory : MonoBehaviour
         }
     }
 
-
-    private void OnTriggerStay(Collider other)
+    public void Init()
     {
-        if (other.tag == "Player")
-        {                 
-            if (Input.GetKeyUp(KeyCode.E) && !m_inDialog)
-            {
-                m_dialogIter = -2;
-                m_playerMove = other.GetComponent<PlayerMovement>();
-                //m_playerMove.lockMovement(true);
-                foreach (var goon in m_goons)
-                {
-                    goon.displaySprite(true);
-                }
-                doDialog();
-            }
+        if (!m_inDialog)
+        {
+            m_inDialog = true;
+            m_dialogIter = -1;       
+            doDialog();
         }
     }
 
@@ -88,20 +78,15 @@ public class DialogTheStory : MonoBehaviour
             }
             else
             {
-                foreach (var goon in m_goons)
-                {
-                    goon.displaySprite(false);
-                }
                 UIManager.instance.NewSubtitle("", "");
                 m_inDialog = false;
-                // m_playerMove.lockMovement(false);
+                UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.GoonChoices);
+
+                foreach (var goon in m_goons)
+                {
+                    goon.highlightSprite(false);
+                }
             }
         }
-    }
-
-    IEnumerator playerMoveAgainDelay()
-    {
-        yield return new WaitForSeconds(0.2f);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().lockMovement(false);
     }
 }
