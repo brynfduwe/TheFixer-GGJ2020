@@ -1,0 +1,25 @@
+﻿{
+  "items":
+  [
+    {
+      "name": "Stretch",
+      "line": "I am Strech!"
+    },
+	{
+      "name": "Skids",
+      "line": "I am Skids!!"
+    },
+	{
+      "name": "Stretch",
+      "line": "Yes you are!"
+    },
+	{
+      "name": "Skids",
+      "line": "Fuck you, Strech."
+    },
+	{
+      "name": "Skids",
+      "line": "Fuck you, Strech."
+    }
+  ]
+}
