@@ -18,30 +18,30 @@
   [
     {
       "name": "Skids",
-      "line": "The Sith are good"
+      "line": "The Sith are good."
     },
 	{
       "name": "Stretch",
-      "line": "The Jedi are good"
+      "line": "The Jedi are good."
     },
 	{
       "name": "Skids",
-      "line": "The Jedi are evil"
+      "line": "The Jedi are evil."
     }
   ],
     "alibi_pt3":
   [
     {
       "name": "Stretch",
-      "line": "I am Skids."
+      "line": "This is all real."
     },
 	{
       "name": "Skids",
-      "line": "I am Strech."
+      "line": "This is a simulation."
     },
 	{
       "name": "Stretch",
-      "line": "Who do you believe?"
+      "line": "This is a video game."
     }
   ]
 }

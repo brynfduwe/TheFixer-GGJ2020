@@ -11,21 +11,61 @@ public class Goon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_Sprite.gameObject.SetActive(false);
+        m_Sprite.color = Color.clear;
     }
 
     public void displaySprite(bool _enable)
     {
-        m_Sprite.gameObject.SetActive(_enable);
-        m_Sprite.color = Color.gray;
+        //m_Sprite.gameObject.SetActive(_enable);
+        //m_Sprite.color = Color.gray;
+        if(!_enable)
+            StartCoroutine(FadeOut());
+        else
+            StartCoroutine(FadeIn());
+    }
+
+    IEnumerator FadeOut()
+    {
+        Color startColor = m_Sprite.color;
+        float lerp = 0;
+        while (lerp < 1)
+        {
+            lerp += Time.deltaTime;
+            m_Sprite.color = Color.Lerp(startColor, Color.clear, lerp);
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeIn()
+    {
+        Color startColor = m_Sprite.color;
+        float lerp = 0;
+        while (lerp < 1)
+        {
+            lerp += Time.deltaTime;
+            m_Sprite.color = Color.Lerp(startColor, Color.gray, lerp);
+            yield return null;
+        }
     }
 
     public void highlightSprite(bool _highlight)
     {
         if (_highlight)
-            m_Sprite.color = Color.white;
+            StartCoroutine(Highlight(Color.white));
         else
-            m_Sprite.color = Color.gray;
+            StartCoroutine(Highlight(Color.gray));
+    }
+
+    IEnumerator Highlight(Color _hcolor)
+    {
+        float lerp = 0;
+        Color startColor = m_Sprite.color;
+        while (lerp < 1)
+        {
+            lerp += Time.deltaTime;
+            m_Sprite.color = Color.Lerp(startColor, _hcolor, lerp);
+            yield return null;
+        }
     }
 
     public string getName()

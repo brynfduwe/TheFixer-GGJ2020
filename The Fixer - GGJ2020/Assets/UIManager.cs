@@ -33,7 +33,28 @@ public class UIManager : MonoBehaviour
 
     public void NewSubtitle(string _name, string _line)
     {
-        m_subtitles.text = (_name + "\n" + _line);
+       string subs = (_name + "\n" + _line);
+        StartCoroutine(StringFaderer(subs));
+    }
+
+    IEnumerator StringFaderer(string _subs)
+    {
+        float lerp = 0;
+        while (lerp < 1)
+        {
+            lerp += Time.deltaTime * 2;
+            m_subtitles.color = Color.Lerp(Color.white, Color.clear, lerp);
+            yield return null;
+        }
+        m_subtitles.text = _subs;
+        lerp = 0;
+        while (lerp < 1)
+        {
+            lerp += Time.deltaTime * 2;
+            m_subtitles.color = Color.Lerp(Color.clear, Color.white, lerp);
+            yield return null;
+        }
+
     }
 
     public void RaiseSubMenu(bool _raised, SubMenus _submenu)

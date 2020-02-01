@@ -12,8 +12,21 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        m_timer = m_countDownFrom;
+        m_timer = m_countDownFrom + 0.5f;
         m_timerUI.text = timeText();
+        m_timerUI.color = Color.clear;
+        StartCoroutine(TimerFadeIn());
+    }
+    
+    IEnumerator TimerFadeIn()
+    {
+        float lerp = 0;
+        while (lerp < 1)
+        {
+            lerp += Time.deltaTime / 2;
+            m_timerUI.color = Color.Lerp(Color.clear, Color.white, lerp);
+            yield return null;
+        }
     }
 
     void Update()
