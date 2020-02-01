@@ -25,6 +25,7 @@ public class DialogBody : MonoBehaviour
         public string line;
     }
     BodyTalkData bodyDialogData = null;
+    BodyTalk[] selectedDialog = null;
 
     [SerializeField] GameObject m_dumpsterButton = null;
     [SerializeField] GameObject m_barrelButton = null;
@@ -74,13 +75,79 @@ public class DialogBody : MonoBehaviour
         }
     }
 
-    public void bodyChoice(int _choice = 0)
+    // Update is called once per frame
+    void Update()
+    {
+        if (m_inDialog)
+        {
+            if (Input.GetKeyUp(KeyCode.E))
+            {
+                doDialog();
+            }
+        }
+    }
+
+    public void doDialog()
+    {
+        m_dialogIter++;
+
+        if (m_dialogIter >= 0)
+        {
+            if (m_dialogIter < selectedDialog.Length)
+            {
+                UIManager.instance.NewSubtitle(selectedDialog[m_dialogIter].name, selectedDialog[m_dialogIter].line);
+                foreach (var goon in m_goons)
+                {
+                    if (goon.getName() == selectedDialog[m_dialogIter].name)
+                        goon.highlightSprite(true);
+                    else
+                        goon.highlightSprite(false);
+                }
+            }
+            else
+            {
+                UIManager.instance.NewSubtitle("", "");
+                m_inDialog = false;
+                UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.GoonChoices);
+                foreach (var goon in m_goons)
+                {
+                    goon.highlightSprite(false);
+                }
+            }
+        }
+    }
+
+    public void bodyChoice(string _choice)
     {
         GameManager.instance.TryBody(_choice);
         UIManager.instance.m_bodyMenuStartButton.SetActive(false);
 
-        UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.GoonChoices);
-        UIManager.instance.NewSubtitle("", "");
+        UIManager.instance.RaiseSubMenu(false, UIManager.SubMenus.GoonChoices);
+   //     UIManager.instance.NewSubtitle("", "");
+
+        if(_choice == "Barrel")
+        {
+            selectedDialog = bodyDialogData.Barrel;
+        }
+        if (_choice == "Dumpster")
+        {
+            selectedDialog = bodyDialogData.Dumpster;
+        }
+        if (_choice == "Dock")
+        {
+            selectedDialog = bodyDialogData.Dock;
+        }
+
+        m_inDialog = true;
+        m_dialogIter = 0;
+        UIManager.instance.NewSubtitle(selectedDialog[m_dialogIter].name, selectedDialog[m_dialogIter].line);
+        foreach (var goon in m_goons)
+        {
+            if (goon.getName() == selectedDialog[m_dialogIter].name)
+                goon.highlightSprite(true);
+            else
+                goon.highlightSprite(false);
+        }
     }
 
     public void Back()

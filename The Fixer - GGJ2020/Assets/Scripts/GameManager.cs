@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerKnowledge m_playerKnowledge = null;
     [SerializeField] int m_playerScore = 0;
     [SerializeField] int[] m_alibiAnswer;
-    [SerializeField] int m_bodyCorrectChoice = 0;
+    [SerializeField] string m_bodyAnswer = "";
     bool m_alibiCorrect = false;
     bool m_bodyCorrect = false;
 
@@ -105,9 +105,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Good alibi");
     }
 
-    public void TryBody(int _choice)
+    public void TryBody(string _choice)
     {
-        if (_choice == m_bodyCorrectChoice)
+        if (_choice == m_bodyAnswer)
         {
             m_bodyCorrect = true;
             Debug.Log("Good body");
