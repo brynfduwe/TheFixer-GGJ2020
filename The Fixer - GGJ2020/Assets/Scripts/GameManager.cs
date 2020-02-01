@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] PlayerKnowledge m_playerKnowledge = null;
-
     [SerializeField] int m_playerScore = 0;
     [SerializeField] int[] m_alibiAnswer;
+    [SerializeField] int m_bodyCorrectChoice = 0;
     bool m_alibiCorrect = false;
+    bool m_bodyCorrect = false;
+
 
     [System.Serializable]
     public class EvidenceReq
@@ -101,5 +103,19 @@ public class GameManager : MonoBehaviour
         //loop done, you won
         m_alibiCorrect = true;
         Debug.Log("Good alibi");
+    }
+
+    public void TryBody(int _choice)
+    {
+        if (_choice == m_bodyCorrectChoice)
+        {
+            m_bodyCorrect = true;
+            Debug.Log("Good body");
+        }
+        else
+        {
+            m_bodyCorrect = false;
+            Debug.Log("Bad body");
+        }
     }
 }

@@ -26,6 +26,11 @@ public class DialogBody : MonoBehaviour
     }
     BodyTalkData bodyDialogData = null;
 
+    [SerializeField] GameObject m_dumpsterButton = null;
+    [SerializeField] GameObject m_barrelButton = null;
+    [SerializeField] GameObject m_dockButton = null;
+
+
     void Awake()
     {
         //Load default egg names
@@ -39,6 +44,8 @@ public class DialogBody : MonoBehaviour
 
     public void Init()
     {
+        UpdateMenuOptions();
+
         UIManager.instance.NewSubtitle("", "");
         UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.HidingTheBody);
         foreach (var goon in m_goons)
@@ -47,8 +54,43 @@ public class DialogBody : MonoBehaviour
         }
     }
 
-    void UpdateMenu()
+    void UpdateMenuOptions()
     {
-        
+        m_dumpsterButton.SetActive(false);
+        m_barrelButton.SetActive(false);
+        m_dockButton.SetActive(false);
+
+        if (GameManager.instance.m_bodyProgress.knownOptions.Contains("Dumpster"))
+        {
+            m_dumpsterButton.SetActive(true);
+        }
+        if (GameManager.instance.m_bodyProgress.knownOptions.Contains("Barrel"))
+        {
+            m_barrelButton.SetActive(true);
+        }
+        if (GameManager.instance.m_bodyProgress.knownOptions.Contains("Dock") && GameManager.instance.m_bodyProgress.knownOptions.Contains("Cinderblock"))
+        {
+            m_dockButton.SetActive(true);
+        }
+    }
+
+    public void bodyChoice(int _choice = 0)
+    {
+        GameManager.instance.TryBody(_choice);
+        UIManager.instance.m_bodyMenuStartButton.SetActive(false);
+
+        UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.GoonChoices);
+        UIManager.instance.NewSubtitle("", "");
+    }
+
+    public void Back()
+    {
+        UIManager.instance.NewSubtitle("", "");
+        UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.GoonChoices);
+        m_inDialog = false;
+        foreach (var goon in m_goons)
+        {
+            goon.highlightSprite(false);
+        }
     }
 }

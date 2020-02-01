@@ -66,6 +66,4 @@ public class DialogManager : MonoBehaviour
             goon.displaySprite(false);
         }
     }
-
-
 }

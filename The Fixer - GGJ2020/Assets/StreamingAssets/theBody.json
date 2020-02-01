@@ -1,47 +1,31 @@
 ﻿{
-  "alibi_pt1":
+  "Dumpster":
   [
-    {
-      "name": "Stretch",
-      "line": "Violets are red."
-    },
 	{
       "name": "Skids",
-      "line": "Roses are blue."
+      "line": "You got it!"
     },
 	{
       "name": "Stretch",
-      "line": "Sunflowers are yellow."
+      "line": "Sure thing."
     }
   ],
-  "alibi_pt2":
+  "Barrel":
   [
-    {
-      "name": "Skids",
-      "line": "The Sith are good."
-    },
 	{
       "name": "Stretch",
-      "line": "The Jedi are good."
-    },
-	{
-      "name": "Skids",
-      "line": "The Jedi are evil."
+      "line": "Yes"
     }
   ],
-    "alibi_pt3":
+    "Dock":
   [
-    {
-      "name": "Stretch",
-      "line": "This is all real."
-    },
 	{
       "name": "Skids",
-      "line": "This is a simulation."
+      "line": "Ye."
     },
 	{
       "name": "Stretch",
-      "line": "This is a video game."
+      "line": "Ye."
     }
   ]
 }

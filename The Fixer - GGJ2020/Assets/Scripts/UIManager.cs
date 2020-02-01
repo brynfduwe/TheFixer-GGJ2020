@@ -30,6 +30,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject m_alibiSubMenu = null;
     [SerializeField] GameObject m_bodyHideSubMenu = null;
 
+    public GameObject m_bodyMenuStartButton = null;
+
     void Awake()
     {
         if (instance == null)

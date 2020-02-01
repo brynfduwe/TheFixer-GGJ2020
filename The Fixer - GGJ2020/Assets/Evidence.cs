@@ -25,7 +25,7 @@ public class Evidence : MonoBehaviour
                     {
                         UIManager.instance.NewSubtitle("The Fixer", m_passiveObservations[Random.Range(0, m_passiveObservations.Length)]);
                     }
-                    doneSeeing = true;
+                    StartCoroutine(doneSeeingDelay());
                 }
                 else
                 {
@@ -48,5 +48,11 @@ public class Evidence : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator doneSeeingDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        doneSeeing = true;
     }
 }
