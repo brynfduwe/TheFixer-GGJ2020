@@ -7,45 +7,46 @@ public class Evidence : MonoBehaviour
     [SerializeField] string m_name = "test";
     [SerializeField] string[] m_passiveObservations;
     [SerializeField] string m_pickUpDescription = "test";
-    bool isInteractable = false;
+    bool doneSeeing = false;
 
-    private void OnTriggerEnter(Collider collision)
+
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (Input.GetKeyUp(KeyCode.E))
         {
-            isInteractable = true;
-
-            if (m_passiveObservations.Length < 0)
-                Debug.Log("Set Observation Phrase on: " + gameObject.name);
-            else
+            if (GameManager.instance.TryEvidence(m_name))
             {
-                UIManager.instance.NewSubtitle("The Fixer", m_passiveObservations[Random.Range(0, m_passiveObservations.Length)], 2);
-            }
-        }
-    }
-
-    private void Update()
-    {
-        if (isInteractable)
-        {
-            if (Input.GetKeyUp(KeyCode.E))
-            {
-                if (GameManager.instance.TryEvidence(m_name))
+                if (!doneSeeing)
                 {
-                    UIManager.instance.NewSubtitle("The Fixer", m_pickUpDescription, 3);
-                    isInteractable = false;
-                    gameObject.SetActive(false);
+                    other.GetComponent<PlayerMovement>().canMove(false);
+                    if (m_passiveObservations.Length < 0)
+                        Debug.Log("Set Observation Phrase on: " + gameObject.name);
+                    else
+                    {
+                        UIManager.instance.NewSubtitle("The Fixer", m_passiveObservations[Random.Range(0, m_passiveObservations.Length)]);
+                    }
+                    doneSeeing = true;
+                }
+                else
+                {
+                    //pickup
+                    if (GameManager.instance.TryEvidence(m_name))
+                    {
+                        other.GetComponent<PlayerMovement>().canMove(true);
+                        UIManager.instance.NewSubtitle("The Fixer", m_pickUpDescription, 3);
+                        gameObject.SetActive(false);
+                    }
                 }
             }
-        }
-    }
-
-    private void OnTriggerExit(Collider collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            isInteractable = false;
-            UIManager.instance.NewSubtitle("", "");
+            else
+            {
+                if (m_passiveObservations.Length < 0)
+                    Debug.Log("Set Observation Phrase on: " + gameObject.name);
+                else
+                {
+                    UIManager.instance.NewSubtitle("The Fixer", m_passiveObservations[Random.Range(0, m_passiveObservations.Length)], 2.5f);
+                }
+            }
         }
     }
 }
