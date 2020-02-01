@@ -30,10 +30,12 @@ public class Evidence : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                GameManager.instance.TryEvidence(m_name);
-                UIManager.instance.NewSubtitle("The Fixer", m_pickUpDescription, 3);
-                isInteractable = false;
-                gameObject.SetActive(false);
+                if (GameManager.instance.TryEvidence(m_name))
+                {
+                    UIManager.instance.NewSubtitle("The Fixer", m_pickUpDescription, 3);
+                    isInteractable = false;
+                    gameObject.SetActive(false);
+                }
             }
         }
     }

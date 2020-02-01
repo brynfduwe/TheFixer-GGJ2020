@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [SerializeField] PlayerKnowledge m_playerKnowledge = null;
+
     [SerializeField] int m_playerScore = 0;
     [SerializeField] int[] m_alibiAnswer;
     bool m_alibiCorrect = false;
@@ -14,8 +16,8 @@ public class GameManager : MonoBehaviour
     public class EvidenceReq
     {
         public string name;
-        public bool found;
-    //    public string[] requiredItems;
+        public bool completed;
+        public string[] requiredItems;
     }
     [SerializeField] EvidenceReq[] m_evidenceNeeded;
 
@@ -27,16 +29,35 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void TryEvidence(string _name)
+    public bool TryEvidence(string _name)
     {
         for(int i = 0; i < m_evidenceNeeded.Length; i++)
         {
             if(m_evidenceNeeded[i].name == _name)
             {
-                m_evidenceNeeded[i].found = true;
-                Debug.Log(_name + " done.");
+                if (m_evidenceNeeded[i].requiredItems.Length == 0)
+                {
+                    m_evidenceNeeded[i].completed = true;
+                    Debug.Log(_name + " completed.");
+                    return true;
+                }
+                else
+                {
+                    for (int j = 0; j < m_evidenceNeeded[i].requiredItems.Length; j++)
+                    {
+                        //if the player hasn't found the things
+                        if (!m_playerKnowledge.m_thingsPlayerKnows.Contains(m_evidenceNeeded[i].requiredItems[j]))
+                        {
+                            return false;
+                        }
+                    }
+                    m_evidenceNeeded[i].completed = true;
+                    Debug.Log(_name + " completed.");
+                    return true;
+                }
             }
         }
+        return false;
     }
 
     public void TryAlibi(int[] _alibi)
