@@ -11,6 +11,7 @@ public class DialogAlibi : MonoBehaviour
     [SerializeField] string m_alibiFilePath = null;
     [SerializeField] Goon[] m_goons = null;
     PlayerMovement m_playerMove = null;
+    [SerializeField] List<int> m_currentAlibi = new List<int>();
 
     [System.Serializable]
     public class AlibiData
@@ -59,6 +60,7 @@ public class DialogAlibi : MonoBehaviour
         m_dialogIter = 0;
         m_alibiSectionIter = 0;
         m_currentAlibiPart = m_alibiData.alibi_pt1;
+        m_currentAlibi.Clear();
         UIManager.instance.NewSubtitle(m_currentAlibiPart[m_dialogIter].name, m_currentAlibiPart[m_dialogIter].line);
         UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.AlibiGame);
         foreach (var goon in m_goons)
@@ -77,6 +79,7 @@ public class DialogAlibi : MonoBehaviour
             if (_accept) //user wants to go with that choice
             {
                 m_alibiSectionIter++;
+                m_currentAlibi.Add(m_dialogIter + 1);
                 m_dialogIter = 0;
 
                 switch (m_alibiSectionIter)
@@ -88,7 +91,7 @@ public class DialogAlibi : MonoBehaviour
                         m_currentAlibiPart = m_alibiData.alibi_pt2;
                         break;
                     case 2:
-                        m_currentAlibiPart = m_alibiData.alibi_pt3;
+                        m_currentAlibiPart = m_alibiData.alibi_pt3;               
                         break;
                     case 3:
                         End();
@@ -116,6 +119,8 @@ public class DialogAlibi : MonoBehaviour
 
     public void End()
     {
+        GameManager.instance.TryAlibi(m_currentAlibi.ToArray());
+
         UIManager.instance.NewSubtitle("", "");
         UIManager.instance.RaiseSubMenu(true, UIManager.SubMenus.GoonChoices);
         m_inDialog = false;

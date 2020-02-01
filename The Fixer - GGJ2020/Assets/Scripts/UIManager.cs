@@ -31,13 +31,13 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void NewSubtitle(string _name, string _line)
+    public void NewSubtitle(string _name, string _line, float timer = -1)
     {
        string subs = (_name + "\n" + _line);
-        StartCoroutine(StringFaderer(subs));
+        StartCoroutine(StringFaderer(subs, timer));
     }
 
-    IEnumerator StringFaderer(string _subs)
+    IEnumerator StringFaderer(string _subs, float _time)
     {
         float lerp = 0;
         while (lerp < 1)
@@ -55,6 +55,18 @@ public class UIManager : MonoBehaviour
             yield return null;
         }
 
+        // auto fadeaway
+        if(_time > -1)
+        {
+            yield return new WaitForSeconds(_time);
+            lerp = 0;
+            while (lerp < 1)
+            {
+                lerp += Time.deltaTime * 2;
+                m_subtitles.color = Color.Lerp(Color.white, Color.clear, lerp);
+                yield return null;
+            }
+        }
     }
 
     public void RaiseSubMenu(bool _raised, SubMenus _submenu)
