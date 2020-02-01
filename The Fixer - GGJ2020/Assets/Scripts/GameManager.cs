@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] string m_bodyAnswer = "";
     bool m_alibiCorrect = false;
     bool m_bodyCorrect = false;
-
+    [SerializeField] Timer m_time = null;
+    bool m_ended = false;
 
     [System.Serializable]
     public class EvidenceReq
@@ -117,5 +118,40 @@ public class GameManager : MonoBehaviour
             m_bodyCorrect = false;
             Debug.Log("Bad body");
         }
+    }
+
+    private void Update()
+    {
+        if (m_time.GetTime() <= 0 && !m_ended)
+        {
+            CalculateEnding();
+            m_ended = true;
+        }
+    }
+
+    public void CalculateEnding()
+    {
+        //1/0: bad
+        //2: medium
+        //3: good
+
+        m_playerScore = 0;
+        if (m_bodyCorrect)
+            m_playerScore++;
+        if (m_alibiCorrect)
+            m_playerScore++;
+
+        bool hidAllEvidence = true;
+        for (int i = 0; i < m_evidenceNeeded.Length; i++)
+        {
+            if(!m_evidenceNeeded[i].completed)
+            {
+                hidAllEvidence = false;
+                break;
+            }
+        }
+
+        if(hidAllEvidence)
+            m_playerScore++;
     }
 }
