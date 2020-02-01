@@ -68,7 +68,7 @@ public class WinSquence : MonoBehaviour
         m_playerMovement.canMove(false);
         UIManager.instance.NewSubtitle("", "");
         UIManager.instance.RaiseSubMenu(false, UIManager.SubMenus.GoonChoices);
-        UIManager.instance.FadeForeground(0.66f, false);
+        UIManager.instance.FadeForeground(0.5F, false);
 
         foreach(var obj in m_disableAtEnd)
         {
