@@ -1,0 +1,35 @@
+﻿{
+  "Bad":
+  [
+	{
+      "name": "The Detective",
+      "line": "Bad boy, gets a bad ending."
+    },
+	{
+      "name": "The Fixer",
+      "line": "noooooo."
+    }
+  ],
+  "Good":
+  [
+	{
+      "name": "The Detective",
+      "line": "Your... GOOD, but not... PERFECT."
+    },
+	{
+      "name": "The Fixer",
+      "line": "phew."
+    }
+  ],
+  "Perfect":
+  [
+	{
+      "name": "The Detective",
+      "line": "I am blinded.. by PERFECTION."
+    },
+	{
+      "name": "The Fixer",
+      "line": "yay."
+    }
+  ]
+}

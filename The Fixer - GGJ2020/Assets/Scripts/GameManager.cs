@@ -132,8 +132,8 @@ public class GameManager : MonoBehaviour
     public void CalculateEnding()
     {
         //1/0: bad
-        //2: medium
-        //3: good
+        //2: good
+        //3: perfect
 
         m_playerScore = 0;
         if (m_bodyCorrect)
@@ -153,5 +153,8 @@ public class GameManager : MonoBehaviour
 
         if(hidAllEvidence)
             m_playerScore++;
+
+
+        WinSquence.instance.EndGame(m_playerScore);
     }
 }

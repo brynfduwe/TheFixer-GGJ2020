@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
+    [SerializeField] Image m_forgroundFade = null;
     [SerializeField] Text m_subtitles = null;
     [SerializeField] RectTransform m_subtitlesRect = null;
     [SerializeField] Vector2 m_subtitlesDefaultPos;
@@ -38,6 +39,41 @@ public class UIManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        m_forgroundFade.color = Color.black;
+        FadeForeground(0.3f, true);
+    }
+
+    public void FadeForeground(float _speed, bool _in)
+    {
+        StartCoroutine(ForeGroundFaderer(_speed, _in));
+    }
+
+    IEnumerator ForeGroundFaderer(float _speed, bool _in)
+    {
+        float lerp = 0;
+        if (_in)
+        {
+            while (lerp < 1)
+            {
+                lerp += Time.deltaTime * _speed;
+                m_forgroundFade.color = Color.Lerp(Color.black, Color.clear, lerp);
+                yield return null;
+            }
+        }
+        else
+        {
+            while (lerp < 1)
+            {
+                lerp += Time.deltaTime * _speed;
+                m_forgroundFade.color = Color.Lerp(Color.clear, Color.black, lerp);
+                yield return null;
+            }
+        }
+        m_forgroundFade.gameObject.SetActive(!_in);
     }
 
     public void NewSubtitle(string _name, string _line, float timer = -1)
