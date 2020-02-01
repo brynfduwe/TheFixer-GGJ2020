@@ -8,19 +8,24 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float m_maxSpeed = 1;
     [SerializeField] float m_acceleration = 0.1f;
     float currentSpeed = 0;
+    bool m_canMove = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical") * 2);
-        currentSpeed += m_acceleration;
-        currentSpeed = Mathf.Clamp(currentSpeed, 0, m_maxSpeed);
-        GetComponent<Rigidbody>().velocity = (dir * currentSpeed);
+        if (m_canMove)
+        {
+            Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical") * 1.5f);
+            currentSpeed += m_acceleration;
+            currentSpeed = Mathf.Clamp(currentSpeed, 0, m_maxSpeed);
+            GetComponent<Rigidbody>().velocity = (dir * currentSpeed);
+        }
+    }
+
+
+    public void lockMovement(bool _lock)
+    {
+        m_canMove = _lock;
     }
 }
