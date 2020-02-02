@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class WinSquence : MonoBehaviour
 {
     [SerializeField] PlayerMovement m_playerMovement = null;
     [SerializeField] GameObject[] m_disableAtEnd = null;
+    [SerializeField] Text m_winText = null;
+
     public static WinSquence instance = null;
 
     bool m_inDialog = false;
@@ -32,6 +35,7 @@ public class WinSquence : MonoBehaviour
     EndingDialog[] m_playersEnding = null;
 
 
+
     void Awake()
     {
         //Load default egg names
@@ -50,6 +54,8 @@ public class WinSquence : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+
+        m_winText.color = Color.clear;
     }
 
     public void EndGame(int _score)
@@ -57,18 +63,21 @@ public class WinSquence : MonoBehaviour
         if(_score <= 1)
         {
             m_playersEnding = m_endingData.Bad;
+            m_winText.text = "Bad Ending";
         }
         if (_score == 2)
         {
             m_playersEnding = m_endingData.Good;
+            m_winText.text = "Good Ending";
         }
         if (_score == 3)
         {
             m_playersEnding = m_endingData.Perfect;
+            m_winText.text = "Perfect Ending";
         }
 
         m_playerMovement.canMove(false);
-        UIManager.instance.NewSubtitle("", "");
+        UIManager.instance.NewSubtitle("", "", 0.5f);
         UIManager.instance.RaiseSubMenu(false, UIManager.SubMenus.none);
         UIManager.instance.FadeForeground(1F, false);
 
@@ -82,7 +91,7 @@ public class WinSquence : MonoBehaviour
 
     IEnumerator delayEndSubs()
     {
-        yield return new WaitForSeconds(3);  
+        yield return new WaitForSeconds(2.5f);  
         m_dialogIter = 0;
         UIManager.instance.NewSubtitle(m_playersEnding[m_dialogIter].name, m_playersEnding[m_dialogIter].line);
         yield return new WaitForSeconds(1);
@@ -123,6 +132,20 @@ public class WinSquence : MonoBehaviour
     IEnumerator EndAndGoToMenu()
     {
         yield return new WaitForSeconds(2);
+        float lerp = 0;
+        while (lerp < 1)
+        {
+            lerp += Time.deltaTime / 100;
+            m_winText.color = Color.Lerp(Color.clear, Color.white, lerp);
+        }
+        yield return new WaitForSeconds(3);
+        lerp = 0;
+        while (lerp < 1)
+        {
+            lerp += Time.deltaTime / 100;
+            m_winText.color = Color.Lerp(Color.white, Color.clear, lerp);
+        }
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Menu");
     }
 

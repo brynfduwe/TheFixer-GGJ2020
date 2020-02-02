@@ -34,6 +34,8 @@ public class UIManager : MonoBehaviour
 
     public GameObject m_bodyMenuStartButton = null;
 
+    Coroutine stopPls = null;
+
     void Awake()
     {
         if (instance == null)
@@ -79,15 +81,16 @@ public class UIManager : MonoBehaviour
 
     public void NewSubtitle(string _name, string _line, float timer = -1)
     {
-       string subs = (_name + "\n" + _line);
-        StopCoroutine("StringFaderer");
-        StartCoroutine(StringFaderer(subs, timer));
+        if(stopPls != null)
+            StopCoroutine(stopPls);
+
+        string subs = (_name + "\n" + _line);
+        stopPls = StartCoroutine(StringFaderer(subs, timer));
     }
 
     IEnumerator StringFaderer(string _subs, float _time)
     {
         float lerp = 0;
-
         m_subtitles.color = Color.clear;
         m_subtitles.text = _subs;
         lerp = 0;

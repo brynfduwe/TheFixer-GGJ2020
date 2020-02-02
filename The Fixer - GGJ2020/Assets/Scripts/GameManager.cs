@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
                     if (checkDoneEverything() == 3) //done everything! (found all evidecnce, done a body choice(could be wrong). good alibi too!)
                     {
                         m_musicMan.forceStopAudio();
-                        WinSquence.instance.EndGame(m_playerScore);
+                        CalculateEnding();
                         m_ended = true;
                     }
                     Debug.Log(_name + " completed.");
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
                     if (checkDoneEverything() == 3) //done everything! (found all evidecnce, done a body choice(could be wrong). good alibi too!)
                     {
                         m_musicMan.forceStopAudio();
-                        WinSquence.instance.EndGame(m_playerScore);
+                        CalculateEnding();
                         m_ended = true;
                     }
                     Debug.Log(_name + " completed.");
@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
         if (checkDoneEverything() == 3) //done everything! (found all evidecnce, done a body choice(could be wrong). good alibi too!)
         {
             m_musicMan.forceStopAudio();
-            WinSquence.instance.EndGame(m_playerScore);
+            CalculateEnding();
             m_ended = true;
         }
     }
@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
         if (checkDoneEverything() == 3) //done everything! (found all evidecnce, done a body choice(could be wrong). good alibi too!)
         {
             m_musicMan.forceStopAudio();
-            WinSquence.instance.EndGame(m_playerScore);
+            CalculateEnding();
             m_ended = true;
         }
     }
@@ -155,6 +155,7 @@ public class GameManager : MonoBehaviour
         if (m_time.GetTime() <= 0 && !m_ended)
         {
             CalculateEnding();
+            m_musicMan.forceStopAudio();
             m_ended = true;
         }
         

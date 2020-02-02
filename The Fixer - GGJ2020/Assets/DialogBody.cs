@@ -10,6 +10,7 @@ public class DialogBody : MonoBehaviour
     int m_dialogIter = -1;
     [SerializeField] string m_theBodyFilePath = null;
     [SerializeField] Goon[] m_goons = null;
+    [SerializeField] GameObject m_bodyObj = null;
 
     [System.Serializable]
     public class BodyTalkData
@@ -119,6 +120,8 @@ public class DialogBody : MonoBehaviour
 
     public void bodyChoice(string _choice)
     {
+        m_bodyObj.SetActive(false);
+
         GameManager.instance.TryBody(_choice);
         UIManager.instance.m_bodyMenuStartButton.SetActive(false);
 
