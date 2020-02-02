@@ -1400,9 +1400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: CleaningSupplies
   m_passiveObservations:
-  - Hmm, cleaning supplies. Could come in handy.
+  - This would wash off any bad stains.
   - Now that would clean up a mess.
-  - Hmm.
   m_type: 0
 --- !u!135 &104644334
 SphereCollider:
@@ -1474,6 +1473,7 @@ Transform:
   m_LocalPosition: {x: 17.33, y: -0.38, z: 6.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1609920723}
   - {fileID: 1563361384}
   m_Father: {fileID: 0}
   m_RootOrder: 19
@@ -3953,7 +3953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Body
   m_passiveObservations:
-  - Can't carry that by myself..
+  - Can't carry him by myself..
   - He looks like a heavy fella.
   m_type: 1
 --- !u!136 &355920294
@@ -13505,8 +13505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Blood
   m_passiveObservations:
-  - Blood... what a mess.
-  - Need to clean this up, and fast.
+  - Gonna need something to clean that.
   m_pickUpDescription: Spotless.
 --- !u!135 &1453213674
 SphereCollider:
@@ -15020,9 +15019,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 816686021}
-  - {fileID: 1609920723}
   m_Father: {fileID: 104644337}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 89, y: 0, z: 0}
 --- !u!1 &1595238288
 GameObject:
@@ -15355,12 +15353,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609920722}
-  m_LocalRotation: {x: -0.5960498, y: -0.060682938, z: -0.0019099803, w: 0.8006488}
-  m_LocalPosition: {x: 0.02, y: 0.55, z: 6.77}
-  m_LocalScale: {x: 0.12, y: 0.13, z: 0.05000001}
+  m_LocalRotation: {x: 0.13604937, y: -0.041943412, z: -0.04389553, w: 0.98884}
+  m_LocalPosition: {x: 0.020000458, y: 2.3306303, z: 0.93806934}
+  m_LocalScale: {x: 0.12, y: 0.12999998, z: 0.05000001}
   m_Children: []
-  m_Father: {fileID: 1563361384}
-  m_RootOrder: 1
+  m_Father: {fileID: 104644337}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -72.685005, y: -18.593, z: 13.461}
 --- !u!212 &1609920724
 SpriteRenderer:
