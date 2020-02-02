@@ -152,7 +152,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (m_time.GetTime() <= 0 && !m_ended)
+        if (m_time.GetTime() <= 0 && !m_ended && m_time.enabled)
         {
             CalculateEnding();
             m_musicMan.forceStopAudio();

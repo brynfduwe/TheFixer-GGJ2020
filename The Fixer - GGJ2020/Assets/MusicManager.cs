@@ -8,12 +8,13 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioSource[] m_musicPhases;
     [SerializeField] int[] m_newPhaseTimeIntervals = new int[] {600, 450, 300, 60};
     int m_musicPhaseIter = 0;
-    bool forcemute;
+    bool forcemute = true;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
         m_musicPhases[m_musicPhaseIter].Play();
+        m_musicPhases[m_musicPhaseIter].volume = 1;
+        forcemute = false;
     }
 
     // Update is called once per frame

@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         m_forgroundFade.color = Color.black;
-        FadeForeground(0.3f, true);
+      //  FadeForeground(0.3f, true);
     }
 
     public void FadeForeground(float _speed, bool _in)

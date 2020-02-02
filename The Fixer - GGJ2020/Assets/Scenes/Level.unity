@@ -1687,11 +1687,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (14)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1762,6 +1757,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &136616424
@@ -1906,11 +1906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (11)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1981,6 +1976,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &163104116
@@ -2087,11 +2087,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (9)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2162,6 +2157,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1001 &171571458
@@ -2176,11 +2176,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (13)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2251,6 +2246,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &171743572
@@ -2802,11 +2802,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (8)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2877,6 +2872,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!4 &236990812 stripped
@@ -3784,11 +3784,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (16)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3859,6 +3854,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1001 &397313060
@@ -4271,7 +4271,7 @@ Transform:
   m_GameObject: {fileID: 454343657}
   m_LocalRotation: {x: -0.805305, y: -0.13885033, z: -0.18613225, w: 0.54548997}
   m_LocalPosition: {x: 1.1300001, y: -0.41999996, z: -0.11000013}
-  m_LocalScale: {x: 0.22080602, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 16089421}
   m_RootOrder: 1
@@ -4816,6 +4816,7 @@ GameObject:
   - component: {fileID: 506030221}
   - component: {fileID: 506030222}
   - component: {fileID: 506030223}
+  - component: {fileID: 506030224}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4830,7 +4831,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506030218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6558de6bddab9b94dbabf17b10cc46b5, type: 3}
   m_Name: 
@@ -4930,6 +4931,22 @@ MonoBehaviour:
   - {fileID: 116634013}
   m_winText: {fileID: 1925888737}
   m_theBodyFilePath: winStates.json
+--- !u!114 &506030224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506030218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a2571bd5a103540ac68f8770528647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timer: {fileID: 506030219}
+  m_musicManager: {fileID: 1475931146}
+  m_phoneLowered: {fileID: 0}
+  m_phoneRaised: {fileID: 0}
 --- !u!1 &508577669
 GameObject:
   m_ObjectHideFlags: 0
@@ -6900,11 +6917,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (2)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 548f2e862d1f9f34ba4ab431df16c064, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6975,6 +6987,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 548f2e862d1f9f34ba4ab431df16c064, type: 2}
     - target: {fileID: 532935191210815014, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7172,11 +7189,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (15)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7247,6 +7259,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &816686020
@@ -7767,6 +7784,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 3514749970663753087, guid: 9275c2e2e3ba1cb4d8efc3d6ba967717,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5dc9fb53d0b9c54ea12921c6e29f55c, type: 2}
     - target: {fileID: 569306476983047291, guid: 9275c2e2e3ba1cb4d8efc3d6ba967717,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7777,11 +7799,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -6.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3514749970663753087, guid: 9275c2e2e3ba1cb4d8efc3d6ba967717,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d5dc9fb53d0b9c54ea12921c6e29f55c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9275c2e2e3ba1cb4d8efc3d6ba967717, type: 3}
 --- !u!4 &868357523 stripped
@@ -9242,11 +9259,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (18)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9317,6 +9329,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &1009828783
@@ -9712,11 +9729,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (4)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 548f2e862d1f9f34ba4ab431df16c064, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9787,6 +9799,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 548f2e862d1f9f34ba4ab431df16c064, type: 2}
     - target: {fileID: 532935191210815014, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11411,11 +11428,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (7)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11486,6 +11498,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &1279380840
@@ -14430,11 +14447,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (6)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14505,6 +14517,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &1602024929
@@ -14974,7 +14991,7 @@ Transform:
   m_GameObject: {fileID: 1654256919}
   m_LocalRotation: {x: -0.046683904, y: 0.7306101, z: 0.6793444, w: 0.050206978}
   m_LocalPosition: {x: 1.81, y: -0.54, z: 1.8299999}
-  m_LocalScale: {x: 0.1, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1934603755}
   m_RootOrder: 1
@@ -15487,11 +15504,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (10)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15562,6 +15574,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &1710524450
@@ -16465,11 +16482,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (17)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16540,6 +16552,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1001 &1803830113
@@ -16554,11 +16571,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (1)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16629,6 +16641,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &1806007099
@@ -17011,11 +17028,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (5)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 548f2e862d1f9f34ba4ab431df16c064, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17086,6 +17098,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 548f2e862d1f9f34ba4ab431df16c064, type: 2}
     - target: {fileID: 532935191210815014, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19539,11 +19556,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (12)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19614,6 +19626,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &1990471935
@@ -20486,11 +20503,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed (3)
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 548f2e862d1f9f34ba4ab431df16c064, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20561,6 +20573,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 548f2e862d1f9f34ba4ab431df16c064, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &2087436677
@@ -20791,11 +20808,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Closed
       objectReference: {fileID: 0}
-    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     - target: {fileID: -4216859302048453862, guid: d1fe84da011843d4e8e57e5712f8e02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20866,6 +20878,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: -7190363496199911533, guid: d1fe84da011843d4e8e57e5712f8e02f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adc661d5770408146bb2dbde2c47c599, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fe84da011843d4e8e57e5712f8e02f, type: 3}
 --- !u!1 &2121672087
@@ -21011,7 +21028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
