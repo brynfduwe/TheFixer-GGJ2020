@@ -12,7 +12,7 @@ public class Evidence : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyUp(KeyCode.Return))
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.Space))
         {
             if (GameManager.instance.TryEvidence(m_name))
             {

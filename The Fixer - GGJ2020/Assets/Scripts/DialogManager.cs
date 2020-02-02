@@ -24,7 +24,7 @@ public class DialogManager : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (Input.GetKeyUp(KeyCode.Return) && !m_inMenu)
+            if ((Input.GetKeyUp(KeyCode.Return) ||  Input.GetKeyUp(KeyCode.Space)) && !m_inMenu)
             {
                 m_playerMove = other.GetComponent<PlayerMovement>();
                 m_playerMove.canMove(false);

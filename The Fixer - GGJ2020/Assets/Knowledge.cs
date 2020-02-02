@@ -20,7 +20,7 @@ public class Knowledge : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (Input.GetKeyUp(KeyCode.Return))
+            if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.Space))
             {
                 // isInteractable = true;
                 if(m_type == KnowledgeType.EvidenceReq)

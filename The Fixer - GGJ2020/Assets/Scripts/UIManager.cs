@@ -84,6 +84,9 @@ public class UIManager : MonoBehaviour
         if(stopPls != null)
             StopCoroutine(stopPls);
 
+        GameObject myEventSystem = GameObject.Find("EventSystem");
+        myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
+
         string subs = (_name + "\n" + _line);
         stopPls = StartCoroutine(StringFaderer(subs, timer));
     }

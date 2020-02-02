@@ -40,7 +40,7 @@ public class DialogTheStory : MonoBehaviour
     {
         if(m_inDialog)
         {
-            if(Input.GetKeyUp(KeyCode.Return))
+            if(Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.Space))
             {
                 doDialog();
             }
