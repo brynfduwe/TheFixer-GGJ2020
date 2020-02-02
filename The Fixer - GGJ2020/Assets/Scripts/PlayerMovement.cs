@@ -10,6 +10,14 @@ public class PlayerMovement : MonoBehaviour
     float currentSpeed = 0;
     bool m_canMove = true;
 
+    [SerializeField] SpriteRenderer m_walkAwaySprite = null;
+    [SerializeField] SpriteRenderer m_walkTowardsSprite = null;
+
+    private void Start()
+    {
+        m_walkAwaySprite.enabled = false;
+        m_walkTowardsSprite.enabled = true;
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,6 +28,17 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed += m_acceleration;
             currentSpeed = Mathf.Clamp(currentSpeed, 0, m_maxSpeed);
             GetComponent<Rigidbody>().velocity = (dir * currentSpeed);
+
+            if(dir.z > 0.5f)
+            {
+                m_walkAwaySprite.enabled = true;
+                m_walkTowardsSprite.enabled = false;
+            }
+            else if (dir.z < -0.5f)
+            {
+                m_walkAwaySprite.enabled = false;
+                m_walkTowardsSprite.enabled = true;
+            }
         }
     }
 
