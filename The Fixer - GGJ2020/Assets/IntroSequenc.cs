@@ -54,7 +54,7 @@ public class IntroSequenc : MonoBehaviour
         yield return new WaitForSeconds(7);
         UIManager.instance.NewSubtitle("The Fixer", "...where?", 3);
         yield return new WaitForSeconds(3);
-        UIManager.instance.NewSubtitle("The Boss", "Docks, Morgan and Son’s warehouse. The cop’s are already on the way.", 5);
+        UIManager.instance.NewSubtitle("The Boss", "Docks, Morgan and Son’s warehouse. The cops are already on the way.", 5);
         yield return new WaitForSeconds(5);
         UIManager.instance.NewSubtitle("The Boss", "You got 5 minutes. Get it done.", 4);
         yield return new WaitForSeconds(5);
