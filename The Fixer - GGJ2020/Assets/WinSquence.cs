@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
+
 
 public class WinSquence : MonoBehaviour
 {
@@ -67,8 +69,8 @@ public class WinSquence : MonoBehaviour
 
         m_playerMovement.canMove(false);
         UIManager.instance.NewSubtitle("", "");
-        UIManager.instance.RaiseSubMenu(false, UIManager.SubMenus.GoonChoices);
-        UIManager.instance.FadeForeground(0.5F, false);
+        UIManager.instance.RaiseSubMenu(false, UIManager.SubMenus.none);
+        UIManager.instance.FadeForeground(1F, false);
 
         foreach(var obj in m_disableAtEnd)
         {
@@ -80,7 +82,7 @@ public class WinSquence : MonoBehaviour
 
     IEnumerator delayEndSubs()
     {
-        yield return new WaitForSeconds(2);  
+        yield return new WaitForSeconds(3);  
         m_dialogIter = 0;
         UIManager.instance.NewSubtitle(m_playersEnding[m_dialogIter].name, m_playersEnding[m_dialogIter].line);
         yield return new WaitForSeconds(1);
@@ -92,7 +94,7 @@ public class WinSquence : MonoBehaviour
     {
         if (m_inDialog)
         {
-            if (Input.GetKeyUp(KeyCode.E))
+            if (Input.GetKeyUp(KeyCode.Return))
             {
                 doDialog();
             }
@@ -112,8 +114,16 @@ public class WinSquence : MonoBehaviour
             {
                 UIManager.instance.NewSubtitle("", "");
                 m_inDialog = false;
+
+                StartCoroutine(EndAndGoToMenu());
             }
         }
+    }
+
+    IEnumerator EndAndGoToMenu()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Menu");
     }
 
 }

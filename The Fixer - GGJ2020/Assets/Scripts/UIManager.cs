@@ -24,7 +24,8 @@ public class UIManager : MonoBehaviour
     {
         GoonChoices,
         AlibiGame,
-        HidingTheBody
+        HidingTheBody,
+        none
     }
 
     [SerializeField] GameObject m_goonChoiceSubmenu = null;
@@ -79,18 +80,15 @@ public class UIManager : MonoBehaviour
     public void NewSubtitle(string _name, string _line, float timer = -1)
     {
        string subs = (_name + "\n" + _line);
+        StopCoroutine("StringFaderer");
         StartCoroutine(StringFaderer(subs, timer));
     }
 
     IEnumerator StringFaderer(string _subs, float _time)
     {
         float lerp = 0;
-        while (lerp < 1)
-        {
-            lerp += Time.deltaTime * 2;
-            m_subtitles.color = Color.Lerp(Color.white, Color.clear, lerp);
-            yield return null;
-        }
+
+        m_subtitles.color = Color.clear;
         m_subtitles.text = _subs;
         lerp = 0;
         while (lerp < 1)
@@ -120,7 +118,11 @@ public class UIManager : MonoBehaviour
 
         float speed = 1;
         if (!_raised)
+        {
             speed = 0.5f;
+            GameObject myEventSystem = GameObject.Find("EventSystem");
+            myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
+        }
 
         iTween.ValueTo(m_subtitlesRect.gameObject, iTween.Hash(
            "from", m_subtitlesRect.anchoredPosition,
@@ -142,17 +144,19 @@ public class UIManager : MonoBehaviour
            "onupdate", "MoveSubmenu"));
 
 
+        if (_submenu != SubMenus.none)
+        {
+            m_alibiSubMenu.SetActive(false);
+            m_goonChoiceSubmenu.SetActive(false);
+            m_bodyHideSubMenu.SetActive(false);
 
-        m_alibiSubMenu.SetActive(false);
-        m_goonChoiceSubmenu.SetActive(false);
-        m_bodyHideSubMenu.SetActive(false);
-
-        if (_submenu == SubMenus.AlibiGame)
-            m_alibiSubMenu.SetActive(true);
-        if (_submenu == SubMenus.GoonChoices)
-            m_goonChoiceSubmenu.SetActive(true);
-        if (_submenu == SubMenus.HidingTheBody)
-            m_bodyHideSubMenu.SetActive(true);
+            if (_submenu == SubMenus.AlibiGame)
+                m_alibiSubMenu.SetActive(true);
+            if (_submenu == SubMenus.GoonChoices)
+                m_goonChoiceSubmenu.SetActive(true);
+            if (_submenu == SubMenus.HidingTheBody)
+                m_bodyHideSubMenu.SetActive(true);
+        }
 
     }
 

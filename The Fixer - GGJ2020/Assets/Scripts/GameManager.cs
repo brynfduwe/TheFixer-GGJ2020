@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [SerializeField] MusicManager m_musicMan = null;
     [SerializeField] PlayerKnowledge m_playerKnowledge = null;
     [SerializeField] int m_playerScore = 0;
     [SerializeField] int[] m_alibiAnswer;
@@ -32,6 +34,9 @@ public class GameManager : MonoBehaviour
     }
     public BodyData m_bodyProgress;
 
+
+    bool m_gameEnded = false;
+
     void Awake()
     {
         if (instance == null)
@@ -49,6 +54,12 @@ public class GameManager : MonoBehaviour
                 if (m_evidenceNeeded[i].requiredItems.Length == 0)
                 {
                     m_evidenceNeeded[i].completed = true;
+                    if (checkDoneEverything() == 3) //done everything! (found all evidecnce, done a body choice(could be wrong). good alibi too!)
+                    {
+                        m_musicMan.forceStopAudio();
+                        WinSquence.instance.EndGame(m_playerScore);
+                        m_ended = true;
+                    }
                     Debug.Log(_name + " completed.");
                     return true;
                 }
@@ -63,6 +74,12 @@ public class GameManager : MonoBehaviour
                         }
                     }
                     m_evidenceNeeded[i].completed = true;
+                    if (checkDoneEverything() == 3) //done everything! (found all evidecnce, done a body choice(could be wrong). good alibi too!)
+                    {
+                        m_musicMan.forceStopAudio();
+                        WinSquence.instance.EndGame(m_playerScore);
+                        m_ended = true;
+                    }
                     Debug.Log(_name + " completed.");
                     return true;
                 }
@@ -104,6 +121,12 @@ public class GameManager : MonoBehaviour
         //loop done, you won
         m_alibiCorrect = true;
         Debug.Log("Good alibi");
+        if (checkDoneEverything() == 3) //done everything! (found all evidecnce, done a body choice(could be wrong). good alibi too!)
+        {
+            m_musicMan.forceStopAudio();
+            WinSquence.instance.EndGame(m_playerScore);
+            m_ended = true;
+        }
     }
 
     public void TryBody(string _choice)
@@ -118,6 +141,13 @@ public class GameManager : MonoBehaviour
             m_bodyCorrect = false;
             Debug.Log("Bad body");
         }
+        m_bodyProgress.completed = true;
+        if (checkDoneEverything() == 3) //done everything! (found all evidecnce, done a body choice(could be wrong). good alibi too!)
+        {
+            m_musicMan.forceStopAudio();
+            WinSquence.instance.EndGame(m_playerScore);
+            m_ended = true;
+        }
     }
 
     private void Update()
@@ -126,6 +156,14 @@ public class GameManager : MonoBehaviour
         {
             CalculateEnding();
             m_ended = true;
+        }
+        
+        if(!m_ended)
+        {
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Menu");
+            }
         }
     }
 
@@ -136,7 +174,7 @@ public class GameManager : MonoBehaviour
         //3: perfect
 
         m_playerScore = 0;
-        if (m_bodyCorrect)
+        if (m_bodyProgress.completed)
             m_playerScore++;
         if (m_alibiCorrect)
             m_playerScore++;
@@ -156,5 +194,30 @@ public class GameManager : MonoBehaviour
 
 
         WinSquence.instance.EndGame(m_playerScore);
+    }
+
+
+    public int checkDoneEverything()
+    {
+        int score = 0;
+        if (m_bodyProgress.completed)
+            score++;
+        if (m_alibiCorrect)
+            score++;
+
+        bool hidAllEvidence = true;
+        for (int i = 0; i < m_evidenceNeeded.Length; i++)
+        {
+            if (!m_evidenceNeeded[i].completed)
+            {
+                hidAllEvidence = false;
+                break;
+            }
+        }
+
+        if (hidAllEvidence)
+            score++;
+
+        return score;
     }
 }

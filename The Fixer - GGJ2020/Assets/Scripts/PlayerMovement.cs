@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         if (m_canMove)
         {
             Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical") * 1.5f);
-            currentSpeed += m_acceleration;
+            currentSpeed += m_acceleration * Time.deltaTime;
             currentSpeed = Mathf.Clamp(currentSpeed, 0, m_maxSpeed);
             GetComponent<Rigidbody>().velocity = (dir * currentSpeed);
 
@@ -46,5 +46,9 @@ public class PlayerMovement : MonoBehaviour
     public void canMove(bool _moveable)
     {
         m_canMove = _moveable;
+        if (!_moveable)
+        {
+            m_rigidBody.velocity = Vector3.zero;
+        }
     }
 }
