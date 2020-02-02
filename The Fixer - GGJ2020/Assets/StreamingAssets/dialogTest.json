@@ -2,20 +2,68 @@
   "items":
   [
     {
+      "name": "Skids",
+      "line": "Well ya see..."
+    },
+    {
       "name": "Stretch",
-      "line": "I am Strech!"
+      "line": "...we was after The Rat."
+    },
+	{
+      "name": "The Fixer",
+      "line": "Who?"
     },
 	{
       "name": "Skids",
-      "line": "I am Skids!!"
+      "line": "Jimmy The Rat."
     },
 	{
       "name": "Stretch",
-      "line": "Yes you are!"
+      "line": "He was one of The Boss's boys, like us, but he got cold feet and wanted out."
     },
 	{
       "name": "Skids",
-      "line": "Fuck you, Strech."
+      "line": "But The Boss didn't like that."
+    },
+	{
+      "name": "Stretch",
+      "line": "Yeah, Jimmy thought he was smart and got some dirt on The Boss."
+    },
+	{
+      "name": "Stretch",
+      "line": "The kinda dirt you don't want getting out. Ain't so smart now are ya Rat."
+    },
+	{
+      "name": "The Fixer",
+      "line": "Ah, so you swiped the dirt, and wiped The Rat?"
+    },
+	{
+      "name": "Skids",
+      "line": "That's about it."
+    },
+	{
+      "name": "Stretch",
+      "line": "But now we got this stinkin' body to deal with."
+    },
+	{
+      "name": "Skids",
+      "line": "Stinks real bad."
+    },
+	{
+      "name": "Stretch",
+      "line": "We usually do the killing... not the cleaning... that's why you're here, right?"
+    },
+	{
+      "name": "The Fixer",
+      "line": "I'm hear to... 'Repair' the situation."
+    },
+	{
+      "name": "Stretch",
+      "line": "Great! We'll do whatever ya need. Just get us outta this mess."
+    },
+	{
+      "name": "Skids",
+      "line": "Pretty please."
     }
   ]
 }

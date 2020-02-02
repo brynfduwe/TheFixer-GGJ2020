@@ -4136,7 +4136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_timerUI: {fileID: 183375251}
-  m_countDownFrom: 600
+  m_countDownFrom: 2
 --- !u!4 &506030220
 Transform:
   m_ObjectHideFlags: 0
@@ -4192,7 +4192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_playerKnowledge: {fileID: 488492311}
   m_playerScore: 0
-  m_alibiAnswer: 030000000300000003000000
+  m_alibiAnswer: 030000000200000002000000
   m_bodyAnswer: Dock
   m_time: {fileID: 506030219}
   m_evidenceNeeded:
@@ -14269,7 +14269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Barrel
   m_passiveObservations:
-  - Hmm, could fit a body in one of thee barrels.
+  - Hmm, could fit a body in one of these barrels.
   m_type: 1
 --- !u!65 &1941307100
 BoxCollider:

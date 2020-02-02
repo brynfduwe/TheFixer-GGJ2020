@@ -3,45 +3,45 @@
   [
     {
       "name": "Stretch",
-      "line": "Violets are red."
-    },
-	{
-      "name": "Skids",
-      "line": "Roses are blue."
+      "line": "We fancied some fresh fish, so we came down to the wharves... "
     },
 	{
       "name": "Stretch",
-      "line": "Sunflowers are yellow."
+      "line": "We where here to beat the snot outta Jimmy..."
+    },
+	{
+      "name": "Stretch",
+      "line": "We where looking for somwhere dry, outta the rain..."
     }
   ],
   "alibi_pt2":
   [
     {
       "name": "Skids",
-      "line": "The Sith are good."
-    },
-	{
-      "name": "Stretch",
-      "line": "The Jedi are good."
+      "line": "...we heard gunshots, and ran in here to help..."
     },
 	{
       "name": "Skids",
-      "line": "The Jedi are evil."
+      "line": "...we heard gunshots, and ran in here for cover..."
+    },
+	{
+      "name": "Skids",
+      "line": "...it was dark, we fumbled with our guns... and they went off..."
     }
   ],
     "alibi_pt3":
   [
     {
       "name": "Stretch",
-      "line": "This is all real."
-    },
-	{
-      "name": "Skids",
-      "line": "This is a simulation."
+      "line": "...Jimmy was dead when we got here!"
     },
 	{
       "name": "Stretch",
-      "line": "This is a video game."
+      "line": "...we've been waiting around ever since."
+    },
+	{
+      "name": "Stretch",
+      "line": "...maybe it was... destiny... or something."
     }
   ]
 }

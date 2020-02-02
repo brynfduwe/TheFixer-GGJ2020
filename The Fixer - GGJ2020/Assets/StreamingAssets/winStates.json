@@ -3,33 +3,113 @@
   [
 	{
       "name": "The Detective",
-      "line": "Bad boy, gets a bad ending."
+      "line": "Well, well, well... Look who it is."
     },
 	{
       "name": "The Fixer",
-      "line": "noooooo."
+      "line": "Detective Hayworth, what's a girl like you doing out on a night like this?"
+    },
+	{
+      "name": "The Detective",
+      "line": "Cut the crap. If you're here, then something's definitly wrong here."
+    },
+	{
+      "name": "The Fixer",
+      "line": "Oh come on... I-"
+    },
+	{
+      "name": "The Detective",
+      "line": "-wasn't in the country when it happened? I've heard it all before. You stay here while we look around and talk to your boys."
+    },
+	{
+      "name": "The Fixer",
+      "line": "..."
+    },
+	{
+      "name": "The Detective",
+      "line": "You're boy's spilled the beans, your name's written all over this."
+    },
+	{
+      "name": "The Detective",
+      "line": "You're coming down town with me."
     }
   ],
   "Good":
   [
 	{
       "name": "The Detective",
-      "line": "Your... GOOD, but not... PERFECT."
+      "line": "Well, well, well... Look who it is."
     },
 	{
       "name": "The Fixer",
-      "line": "phew."
+      "line": "Detective Hayworth, what's a girl like you doing out on a night like this?"
+    },
+	{
+      "name": "The Detective",
+      "line": "Cut the crap. If you're here, then something's definitly wrong here."
+    },
+	{
+      "name": "The Fixer",
+      "line": "Oh come on... I-"
+    },
+	{
+      "name": "The Detective",
+      "line": "-wasn't in the country when it happened? I've heard it all before. You stay here while we look around and talk to your boys."
+    },
+	{
+      "name": "The Fixer",
+      "line": "..."
+    },
+	{
+      "name": "The Detective",
+      "line": "You're slipping up old man, ain't got enough to pin you for this..."
+    },
+	{
+      "name": "The Detective",
+      "line": "...but if you keep this up, I'll have behind bars before you can sweep anything else under the rug."
     }
   ],
   "Perfect":
   [
 	{
       "name": "The Detective",
-      "line": "I am blinded.. by PERFECTION."
+      "line": "Well, well, well... Look who it is."
     },
 	{
       "name": "The Fixer",
-      "line": "yay."
+      "line": "Detective Hayworth, what's a girl like you doing out on a night like this?"
+    },
+	{
+      "name": "The Detective",
+      "line": "Cut the crap. If you're here, then something's definitly wrong here."
+    },
+	{
+      "name": "The Fixer",
+      "line": "Oh come on... I-"
+    },
+	{
+      "name": "The Detective",
+      "line": "-wasn't in the country when it happened? I've heard it all before. You stay here while we look around and talk to your boys."
+    },
+	{
+      "name": "The Fixer",
+      "line": "..."
+    },
+	{
+      "name": "The Detective",
+      "line": "As I guessed... An uneventful night at the docks."
+    },
+	{
+      "name": "The Detective",
+      "line": "No bodies. No evidence, No nothing."
+    },
+	{
+      "name": "The Detective",
+      "line": "Guess that's why The Boss pays you the big bucks."
+    },
+	{
+      "name": "The Fixer",
+      "line": "It's what I do."
     }
   ]
 }

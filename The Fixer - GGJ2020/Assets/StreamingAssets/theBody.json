@@ -2,30 +2,30 @@
   "Dumpster":
   [
 	{
-      "name": "Skids",
-      "line": "You got it!"
+      "name": "Stretch",
+      "line": "Ah, nice and simple."
     },
 	{
-      "name": "Stretch",
-      "line": "Sure thing."
+      "name": "Skids",
+      "line": "...why didn't we thinka that?!"
     }
   ],
   "Barrel":
   [
 	{
       "name": "Stretch",
-      "line": "Yes"
+      "line": "A tight squeeze, but Jimmy ain't complaining."
     }
   ],
     "Dock":
   [
 	{
-      "name": "Skids",
-      "line": "Ye."
+      "name": "Stretch",
+      "line": "We normally do that while they still breathin'."
     },
 	{
-      "name": "Stretch",
-      "line": "Ye."
+      "name": "Skids",
+      "line": "Tha end result is the same."
     }
   ]
 }
