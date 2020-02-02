@@ -3798,9 +3798,9 @@ GameObject:
   - component: {fileID: 355920297}
   - component: {fileID: 355920296}
   - component: {fileID: 355920295}
-  - component: {fileID: 355920294}
   - component: {fileID: 355920293}
   - component: {fileID: 355920292}
+  - component: {fileID: 355920294}
   m_Layer: 0
   m_Name: TheBody
   m_TagString: Untagged
@@ -3838,8 +3838,8 @@ MonoBehaviour:
   - Can't carry that by myself..
   - He looked like a heavy fella.
   m_type: 1
---- !u!65 &355920294
-BoxCollider:
+--- !u!136 &355920294
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3848,9 +3848,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: -0.90027237}
+  m_Radius: 1.72
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0.01, y: 0.21, z: -0.6}
 --- !u!135 &355920295
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5632,7 +5633,7 @@ Transform:
   m_GameObject: {fileID: 565205341}
   m_LocalRotation: {x: 0.49908724, y: -0.09718318, z: 0.09146547, w: 0.8562135}
   m_LocalPosition: {x: 0.2, y: 0, z: -0.92}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 355920298}
   m_RootOrder: 0
@@ -8601,7 +8602,7 @@ Transform:
   m_GameObject: {fileID: 905110623}
   m_LocalRotation: {x: 0.19765724, y: 0.0009495517, z: -0.00019146319, w: 0.98027074}
   m_LocalPosition: {x: -0.018, y: 0.09, z: -0.508}
-  m_LocalScale: {x: 0.2, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.09, z: 1}
   m_Children: []
   m_Father: {fileID: 1891503295}
   m_RootOrder: 0
@@ -8644,7 +8645,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 641e5f1f7e2c295439a34dc57cb6bd13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3ebfe0c147857f499a34f17776ce6b9, type: 3}
   m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -13280,7 +13281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453213672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: -0.38, z: -3.13}
+  m_LocalPosition: {x: 6.06, y: -0.38, z: 1.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 848947425}
@@ -14208,7 +14209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166, y: -113}
+  m_AnchoredPosition: {x: 166, y: -160}
   m_SizeDelta: {x: 316.5, y: 615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517832960
@@ -14229,7 +14230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 641e5f1f7e2c295439a34dc57cb6bd13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3ebfe0c147857f499a34f17776ce6b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
